@@ -1,0 +1,29 @@
+{
+  "name": "work",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "client": "cd rpp && yarn start",
+    "server": "nodemon server.js",
+    "build": "cd rpp && npm run build",
+    "dev": "concurrently --kill-others-on-fail \"yarn server\" \"yarn client\"",
+    "start": "node server.js",
+    "heroku-postbuild": "cd rpp && npm install && npm install --only=dev --no-shrinkwrap && npm run build"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.19.2",
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "express-fileupload": "^1.1.6",
+    "multer": "^1.4.2",
+    "react-stripe-checkout": "^2.6.3"
+  },
+  "devDependencies": {
+    "concurrently": "^4.1.2"
+  }
+}
