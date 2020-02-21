@@ -9,7 +9,7 @@ import axios from 'axios'
 const App=()=>{
 
 
-const publishableKey = 'pk_test_WBqax2FWVzS9QlpJScO07iuL';
+const publishableKey = '';
 
 const [name,setName]=useState('')
 
